@@ -1,0 +1,34 @@
+{
+  "name": "hapi-ts-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "start-docker": "npm install && tsc && node build/app.js",
+    "start": "node --inspect -r ts-node/register ./src/app.ts",
+    "watch": "nodemon --inspect ./src/app.ts",
+    "-watch": "tsc -w",
+    "build": "tsc",
+    "test": "eslint src/app.ts"
+  },
+  "author": "EThaiZone <ethaizone@hotmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^18.4.0",
+    "@hapi/inert": "^5.2.2",
+    "@hapi/vision": "^5.5.4",
+    "hapi-swagger": "^10.3.0"
+  },
+  "devDependencies": {
+    "@types/hapi__hapi": "^18.2.6",
+    "@types/hapi__inert": "^5.2.0",
+    "@types/hapi__vision": "^5.5.1",
+    "@types/node": "^13.1.2",
+    "@typescript-eslint/eslint-plugin": "^2.11.0",
+    "@typescript-eslint/parser": "^2.11.0",
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  }
+}
