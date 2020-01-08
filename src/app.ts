@@ -46,7 +46,9 @@ const routes = [
             },
             description: 'Get todo',
             notes: 'Returns a todo item by the id passed in the path',
-            tags: ['api'], // ADD THIS TAG
+            tags: ['api'],
+
+            // This two use for validation in request, response and creating swagger too.
             validate: {
                 params: Joi.object({
                     id : Joi.number()
@@ -56,7 +58,7 @@ const routes = [
             },
             response: {
                 schema: Joi.object({
-                    id : Joi.number()
+                    sid : Joi.number()
                         .required()
                         .description('the id for the todo item'),
                 }),
